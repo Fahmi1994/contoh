@@ -167,7 +167,7 @@
     border-radius: 10px; /* Border radius */
     transform-style: preserve-3d;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 20px; /* Margin for spacing */
+    margin: 50px; /* Margin for spacing */
   }
   
   .card:hover {
@@ -217,7 +217,7 @@
 
     .card {
       padding: 15px;
-      max-width: 300px; /* Adjust max width for tablet screens */
+      max-width: 400px; /* Adjust max width for tablet screens */
     }
   
     .card h3 {
@@ -232,7 +232,7 @@
   @media (max-width: 480px) {
     .card {
       padding: 15px;
-      max-width: 300px; /* Adjust max width for mobile screens */
+      max-width: 400px; /* Adjust max width for mobile screens */
     }
   
     .card h3 {
