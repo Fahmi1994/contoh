@@ -5,10 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bocahangon Konveksi</title>
   <link rel="stylesheet" href="index.css"> <!-- Menghubungkan ke file CSS eksternal -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.7/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <!-- Font Awesome CDN Link -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<!-- Dark Mode Toggle -->
+<div class="dark-mode-toggle">
+  <button id="darkModeButton">
+    <i class="fas fa-lightbulb"></i>
+  </button>
+</div>
 </head>
 <body>
   <!-- Hero Section -->
@@ -20,7 +25,7 @@
 </section>
 
 <div class="hero-text">
-  <h1>Bocah Angon Konveksi & Web</h1>
+  <h1>Bocah Angon Konveksi & Website</h1>
   <p>Bocah Angon adalah usaha konveksi yang berfokus pada pembuatan pakaian berkualitas tinggi dengan harga yang terjangkau. Kami mengutamakan kualitas, ketepatan waktu, dan kepuasan pelanggan dalam setiap produk yang kami hasilkan. Selain itu, kami juga menyediakan jasa pembuatan website untuk membantu bisnis Anda tampil profesional di dunia digital. Dengan pengalaman dan keahlian, kami siap membantu mewujudkan website impian Anda yang mudah diakses, responsif, dan sesuai dengan kebutuhan bisnis.</p>
 <!-- Small logo centered below h1 -->
 <div class="logo-container">
@@ -250,28 +255,6 @@
     </div>
 
   </section>
-<!-- Carousel Section -->
-<section class="carousel">
-  <div class="swiper-container">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img src="img/step.jpg" alt="Produk 1">
-      </div>
-      <div class="swiper-slide">
-        <img src="img/chat.jpg" alt="Produk 2">
-      </div>
-      <div class="swiper-slide">
-        <img src="img/packing.jpg" alt="Produk 3">
-      </div>
-    </div>
-    <!-- Slide navigation buttons are inside the carousel now -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-  </div>
-</section>
-
-
-
 
 <!-- YouTube Video Section -->
 <section class="video-section">
@@ -285,7 +268,8 @@
 
 <!-- Banner Promotion Section -->
 <section class="banner-promotion">
-  <img src="img/bannerkonweb.jpg" alt="Banner Promosi">
+  <h2>Banner Promotion</h2>
+  <img src="img/banner2.jpg" alt="Banner Promosi">
 </section>
 
 <!-- Portfolio Section -->
@@ -298,11 +282,12 @@
     <div class="portfolio-item"><img src="img/potong.png" alt="Pekerjaan 4"></div>
   </div>
 </section>
-<!-- Portfolio Section -->
-<section class="Daftar Client">
+
+<!-- Client Section -->
+<section class="Daftar-Client">
   <h2>Daftar Client </h2>
   <div class="Client-gallery">
-    <div class="portfolio-item"><img src="img/daftar_client.jpg" alt="Client 1"></div>
+    <div class="client-item"><img src="img/client1.jpg" alt="Client 1"></div>
   </div>
 </section>
 
@@ -324,20 +309,18 @@
   <div class="map-container">
     <h3>Lokasi</h3>
     <p><strong>Silahkan bisa langsung datang ke tempat kami juga</strong></p>
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.1766351201054!2d106.853863!3d-6.361448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f45bbf2e6a37%3A0x178c7d59a900e45c!2s-6.361448%2C%20106.853863!5e0!3m2!1sen!2sus!4v1612517201057!5m2!1sen!2sus"
-      width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
-    </iframe>
-  </div>
-  
-  
-
-<!-- Dark Mode Toggle -->
-<div class="dark-mode-toggle">
-  <button id="darkModeButton">
-    <i class="fas fa-moon"></i>
-  </button>
+    
+    <!-- Tautan untuk membuka di Google Maps saat diklik -->
+    <a href="https://www.google.com/maps?q=-6.361448,106.853863" target="_blank">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.1766351201054!2d106.853863!3d-6.361448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f45bbf2e6a37%3A0x178c7d59a900e45c!2s-6.361448%2C%20106.853863!5e0!3m2!1sen!2sus!4v1612517201057!5m2!1sen!2sus"
+            width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+        </iframe>
+    </a>
 </div>
+
+
+
 
 <!-- Footer -->
 <footer>
@@ -346,11 +329,11 @@
 
 <div class="scroll-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.7/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const cards = document.querySelectorAll('.card');
-  
+    
     cards.forEach(card => {
       const slider = card.querySelector('.image-slider');
       const prevBtn = card.querySelector('.prev');
@@ -359,30 +342,32 @@
       const images = slider.querySelectorAll('img');
       const totalImages = images.length;
   
-      // Update the slider to show the correct image
+      // Update the slider untuk menampilkan gambar yang sesuai
       function updateSlider() {
-          // Fade out all images
+          // Sembunyikan semua gambar dengan opacity 0
           images.forEach((img, index) => {
-              img.style.opacity = '0'; // Hide all images
-              img.style.transition = 'opacity 0.5s ease'; // Smooth transition for opacity
+              img.style.opacity = '0'; // Sembunyikan semua gambar
           });
   
-          // Show the current image
-          images[currentIndex].style.opacity = '1'; // Make the current image visible (fix opacity)
+          // Tampilkan gambar yang aktif dengan opacity 1
+          images[currentIndex].style.opacity = '1'; // Menampilkan gambar yang sedang aktif
       }
   
-      // Navigation button events
+      // Event untuk tombol prev
       prevBtn.addEventListener('click', function () {
+          // Mengurangi index jika tombol prev ditekan, dan jika sudah di awal, kembali ke gambar terakhir
           currentIndex = (currentIndex === 0) ? totalImages - 1 : currentIndex - 1;
           updateSlider();
       });
   
+      // Event untuk tombol next
       nextBtn.addEventListener('click', function () {
+          // Menambah index jika tombol next ditekan, dan jika sudah di akhir, kembali ke gambar pertama
           currentIndex = (currentIndex === totalImages - 1) ? 0 : currentIndex + 1;
           updateSlider();
       });
   
-      // Initialize the first image to be visible
+      // Inisialisasi gambar pertama yang tampil
       updateSlider();
     });
   });
@@ -395,20 +380,12 @@
     // Change the icon between moon and sun
     const isDarkMode = document.body.classList.contains('dark-mode');
     if (isDarkMode) {
-      darkModeButton.innerHTML = '<i class="fas fa-sun"></i>';  // Sun icon
+      darkModeButton.innerHTML = '<i class="fas fa-lightbulb"></i>';  // Sun icon
     } else {
       darkModeButton.innerHTML = '<i class="fas fa-moon"></i>';  // Moon icon
     }
   });
-  
-  var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 2,
-    spaceBetween: 10,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
-    }
-  });
+   
   window.addEventListener('scroll', function() {
     const scrollToTopButton = document.querySelector('.scroll-to-top');
     
