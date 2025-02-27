@@ -167,7 +167,7 @@
     border-radius: 10px; /* Border radius */
     transform-style: preserve-3d;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 50px; /* Margin for spacing */
+    margin: 40px; /* Margin for spacing */
   }
   
   .card:hover {
