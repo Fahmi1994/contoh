@@ -232,7 +232,7 @@
   @media (max-width: 480px) {
     .card {
       padding: 15px;
-      max-width: 400px; /* Adjust max width for mobile screens */
+      max-width: 350px; /* Adjust max width for mobile screens */
     }
   
     .card h3 {
